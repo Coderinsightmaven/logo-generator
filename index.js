@@ -1,6 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
-var { generateShapeSVG } = require("./lib/shapes");
+const { Triangle, Circle, Square, generateShapeSVG } = require("./lib/shapes");
 
 const questions = [
   {
@@ -44,9 +44,17 @@ inquirer.prompt(questions).then((answers) => {
 });
 
 function generateSVG(answers) {
+  const shapeConstructors = {
+    circle: Circle,
+    triangle: Triangle,
+    square: Square,
+  };
+
+  const shapeType = shapeConstructors[answers.shape];
+
   const baseSvg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">`;
 
-  const shapeSvg = generateShapeSVG(answers.shape, answers.shapeColor);
+  const shapeSvg = generateShapeSVG(shapeType, answers.shapeColor);
   const textSvg = `<text x="150" y="105" font-family="Arial" font-size="48" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
 
   return `${baseSvg}${shapeSvg}${textSvg}</svg>`;
