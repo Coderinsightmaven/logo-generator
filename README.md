@@ -5,10 +5,11 @@
 1. [Description](#description)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [License](#license)
-5. [Contributing](#contributing)
-6. [Tests](#tests)
-7. [Questions](#questions)
+4. [Tutorial](#tutorial)
+5. [License](#license)
+6. [Contributing](#contributing)
+7. [Tests](#tests)
+8. [Questions](#questions)
 
 ## Description
 
@@ -23,6 +24,10 @@ In order to install this program you need to clone the program from github. Then
 The usage of this project is to be able to easily create a logo for future and past projects.
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## Tutorial
+
+Click [here](https://drive.google.com/file/d/17hyZ2H5N-ixnpEr2fbq2McJ8RnSeRNTT/view?usp=drive_link) to view a tutorial if you need more of an explanation.
 
 ## License
 
